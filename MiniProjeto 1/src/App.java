@@ -98,6 +98,12 @@ public class App {
     }
     public static void dialogoFavoravel(Scanner scan){
         print("Pessoa Encapuzada: Haha, vejo que você não tem medo.");
+        print("Pessoa Encapuzada: Vou te dar uma chance de sobreviver");
+        print("Ele então joga no chão proximo a você um mapa");
+        print("Pessoa Encapuzada: Siga isso e conseguirar sair do labirinto com facilidade");
+        print("Pessoa Encapuzada: Por sinal a chave está em meio ao feno, espero nos vermos de novo");
+        print("Ele se cobre novamente com o capuz e desaparece em névoa, deixando você no local só");
+        saidaSolto(scan);
     }
     public static void saidaPreso(Scanner scan){
         print("Segundo final possivel, você fica preso no local ferido e agora terá de sobreviver de alguma forma");
