@@ -113,7 +113,7 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
-        //print("Sua vista está turva, e você está aparentemente deitado no chão, na sua boca um gosto amargo que você não reconhece.");
+        print("Sua vista está turva, e você está aparentemente deitado no chão, na sua boca um gosto amargo que você não reconhece.");
         print("Suas mão estão presas a uma corrente, e a mesma aparentemente terminava numa parede de concreto. Feno estava espalhado");
         print("pelo chão. A cerca de 10 metros de você, uma pessoa com um capuz lhe observa.");
         print("");
