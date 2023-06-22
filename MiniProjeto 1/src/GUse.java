@@ -7,7 +7,7 @@ public class GUse {
         try {
             TimeUnit.MILLISECONDS.sleep(200);
         } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
+            System.out.println("Erro no tempo");
         }
     }
      
