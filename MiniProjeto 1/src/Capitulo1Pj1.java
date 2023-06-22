@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Capitulo1Pj1 extends GUse{
     Personagem Pjprincipal;
 
-    public static void opcaoFicardePe(Scanner scan){
+    public void opcaoFicardePe(Scanner scan){
         print(">Você junta forças e se prepara para levanta, tentando ficar de pé na frente da pessoa");
         String[] lista = {"Claro que sei","Dar nos ombros","Pronunciar palavras sem sentido"};
         int resposta = escolhas(scan, "Pessoa Encapuzada: Não vai falar nada? você não sabe falar?", lista);
@@ -23,7 +23,7 @@ public class Capitulo1Pj1 extends GUse{
                 break;
         }
     }
-    public static void opcaoFicarDeitado(Scanner scan){
+    public void opcaoFicarDeitado(Scanner scan){
         print(">Você resolve ignorar o comando da pessoa e fica ali mesmo deitado");
         print("A pessoa arqueia uma das sobrancelhas, e então revela uma arma de fogo por dentro do capuz");
         String[] lista = {"Continuar deitado","Pedir Desculpa", "Apenas se levantar"};
@@ -37,7 +37,7 @@ public class Capitulo1Pj1 extends GUse{
             opcaoFicardePe(scan);
         }
     }
-    public static void opcaoDialogar(Scanner scan){
+    public void opcaoDialogar(Scanner scan){
         print(">Você se poe de pé e então começa a conversar com a pessoa");
         print("Pessoa Encapuzada: Me mandaram aqui lhe soltar, mas ... você não parece tão importante assim");
         String[] lista = {"Me solta logo","Seu trabalho","Porque esta enrrolando pra me soltar?"};
@@ -58,7 +58,7 @@ public class Capitulo1Pj1 extends GUse{
                 break;
         }
     }
-    public static void opcaoOfender(Scanner scan){
+    public  void opcaoOfender(Scanner scan){
         print(">Você simplesmente se levanta e manda a pessoa se 'F@d&r'");
         print("");
         print("A pessoa retira o capuz devagar e então sem falar muito saca uma pistola e aponta para você");
@@ -69,11 +69,12 @@ public class Capitulo1Pj1 extends GUse{
             print("Pessoa Encapuzada: Vejo que você é só um covarde que fala demais");
             print("A pessoa armada então aperta o gatilho 3 vezes, lhe acertando com varios disparos");
             print("Você morreu !!!");
+            Pjprincipal.receberDano(100);
         } else {
             dialogoFavoravel(scan);
         }
     }
-    public static void dialogoFavoravel(Scanner scan){
+    public void dialogoFavoravel(Scanner scan){
         print("Pessoa Encapuzada: Haha, vejo que você não tem medo.");
         print("Pessoa Encapuzada: Vou te dar uma chance de sobreviver");
         print("Ele então joga no chão proximo a você um mapa");
@@ -82,11 +83,11 @@ public class Capitulo1Pj1 extends GUse{
         print("Ele se cobre novamente com o capuz e desaparece em névoa, deixando você no local só");
         saidaSolto(scan);
     }
-    public static void saidaPreso(Scanner scan){
-        print("Segundo final possivel, você fica preso no local ferido e agora terá de sobreviver de alguma forma");
+    public void saidaPreso(Scanner scan){
+        Pjprincipal.receberDano(50);
     }
-    public static void saidaSolto(Scanner scan){
-        print("Terceiro final possivel, a pessoa te ajuda a sair do local e te entrega um mapa");
+    public void saidaSolto(Scanner scan){
+        Pjprincipal.addItem("Mapa do Labirinto");
     }
     public void main(Scanner scan, Personagem pj){
         Pjprincipal = pj;

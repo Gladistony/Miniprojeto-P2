@@ -15,13 +15,13 @@ public class App extends GUse {
         pjPrincipal.ObterNome(scan, "Digite o nome do seu personagem principal");
         pjSecundario = new Personagem();
         pjSecundario.ObterNome(scan, "Digite o nome do seu personagem secundario");
-        //Iniciar classe principal para o pj 1
+        //Iniciar o primeiro capitulo
         Cap1.main(scan, pjPrincipal);
         print("-------------------------------------------------");
         print("Enquanto isso, em um outro universo paralelo ....");
         print("-------------------------------------------------");
         Cap1.main(scan, pjSecundario);
-
+        //Começar o segundo capitulo para o pj 
 
         //Finalização/Opção de reiniciar o jogo
         print("Obrigado por jogar");

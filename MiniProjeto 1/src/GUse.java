@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class GUse {
     public static void print(String txt){
         System.out.println(txt);
+        TimeUnit.SECONDS.sleep(1);
     }
     public static int escolhas(Scanner scan, String pergunta, String[] opcoes){
         print(pergunta);
