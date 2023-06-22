@@ -10,7 +10,15 @@ public class GUse {
             System.out.println("Erro no tempo");
         }
     }
-     
+    public static void printCentral(String txt) {
+        int tam = 25 - txt.length() / 2;
+        System.out.println("--------------------------------------------------");
+        for (int i = 0; i < tam; i++){
+            System.out.print(" ");
+        }
+        System.out.print(txt);System.out.println();
+        System.out.println("--------------------------------------------------");
+    }
     public static int escolhas(Scanner scan, String pergunta, String[] opcoes){
         print(pergunta);
         for (int i = 0; i < opcoes.length ;i++ ){

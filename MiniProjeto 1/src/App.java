@@ -16,23 +16,15 @@ public class App extends GUse {
         pjSecundario = new Personagem();
         pjSecundario.ObterNome(scan, "Digite o nome do seu personagem secundario");
         //Iniciar o primeiro capitulo
-        print("-------------------------------------------------");
-        print("                 Capitulo 1");
-        print("-------------------------------------------------");
+        printCentral("Capitulo 1");
         Cap1.main(scan, pjPrincipal);
-        print("-------------------------------------------------");
-        print("  Enquanto isso, em um outro universo paralelo");
-        print("-------------------------------------------------");
+        printCentral("Enquanto isso, em um outro universo paralelo");
         Cap1.main(scan, pjSecundario);
         //Mostra relatorio de cada personagem
-        print("-------------------------------------------------");
-        print("          Relatorio dos Personagens");
-        print("-------------------------------------------------");
+        printCentral("Relatorio dos Personagens");
         pjPrincipal.showData();
         pjSecundario.showData();
-        print("-------------------------------------------------");
-        print("                 Capitulo 2");
-        print("-------------------------------------------------");
+        printCentral("Capitulo 2");
         //Finalização/Opção de reiniciar o jogo
         print("Obrigado por jogar");
         String[] lista2 = {"Sim", "Nao"};

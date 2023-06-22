@@ -61,9 +61,7 @@ public class Capitulo1Pj1 extends GUse{
     }
     public  void opcaoOfender(Scanner scan){
         print(">Você simplesmente se levanta e manda a pessoa se 'F@d&r'");
-        print("");
         print("A pessoa retira o capuz devagar e então sem falar muito saca uma pistola e aponta para você");
-        print("");
         String[] lista = {"Reafirma","Pedir Desculpa"};
         int resposta = escolhas(scan,"Pessoa Encapuzada: O que você falou?", lista);
         if (resposta == 2){
@@ -95,10 +93,7 @@ public class Capitulo1Pj1 extends GUse{
         print("A vista de "+ Pjprincipal.Nome +" está turva, e você está aparentemente deitado no chão, na sua boca um gosto amargo que você não reconhece.");
         print("Suas mão estão presas a uma corrente, e a mesma aparentemente terminava numa parede de concreto. Feno estava espalhado");
         print("pelo chão. A cerca de 10 metros de você, uma pessoa com um capuz lhe observa.");
-        print("");
-        print("");
         print("Pessoa Encapuzada: Vejo que você já acordou, vamos logo com isso, se apresse e se ponha de pé ...");
-        print("");
         String[] lista = {"Ficar de pe","Continuar deitado","Dialogar","Ofender"};
         int resposta = escolhas(scan,"O que você deseja fazer?", lista);
         switch (resposta){
