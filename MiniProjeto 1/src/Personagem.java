@@ -18,6 +18,13 @@ public class Personagem extends GUse{
     public void addItem(String item){
         Bag.Add(item);
     }
+    public void showData(){
+        if (vivo()){
+            print(Nome +" - "+ HPAtual + " / 100 Inventario: "+Bag.listar());
+        } else {
+            print(Nome + " está morto");
+        }
+    }
     public Personagem(){
         Bag = new Inventario();
     }

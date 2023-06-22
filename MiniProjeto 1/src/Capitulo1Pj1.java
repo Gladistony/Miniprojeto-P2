@@ -31,6 +31,7 @@ public class Capitulo1Pj1 extends GUse{
         if (resposta == 1){
             print("A pessoa armada então aperta o gatilho 3 vezes, lhe acertando com varios disparos");
             print("Você morreu !!!");
+            Pjprincipal.receberDano(100);
         } else if (resposta == 2){
             opcaoDialogar(scan);
         } else {

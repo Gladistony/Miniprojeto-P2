@@ -5,7 +5,7 @@ public class GUse {
     public static void print(String txt){
         System.out.println(txt);
         try {
-            TimeUnit.MILLISECONDS.sleep(100);
+            TimeUnit.MILLISECONDS.sleep(200);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
         }
