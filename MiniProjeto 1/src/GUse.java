@@ -4,8 +4,13 @@ import java.util.concurrent.TimeUnit;
 public class GUse {
     public static void print(String txt){
         System.out.println(txt);
-        TimeUnit.SECONDS.sleep(1);
+        try {
+            TimeUnit.MILLISECONDS.sleep(100);
+        } catch (InterruptedException e) {
+            System.err.format("IOException: %s%n", e);
+        }
     }
+     
     public static int escolhas(Scanner scan, String pergunta, String[] opcoes){
         print(pergunta);
         for (int i = 0; i < opcoes.length ;i++ ){
