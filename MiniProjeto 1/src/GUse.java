@@ -10,6 +10,10 @@ public class GUse {
             System.out.println("Erro no tempo");
         }
     }
+    public static void instaprint(String txt){
+        System.out.println(txt);
+    }
+
     public static void printCentral(String txt) {
         int tam = 25 - txt.length() / 2;
         System.out.println("--------------------------------------------------");

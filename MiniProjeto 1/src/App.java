@@ -7,6 +7,7 @@ public class App extends GUse {
         Scanner scan = new Scanner(System.in);
         int resposta;
         Capitulo1Pj1 Cap1 = new Capitulo1Pj1();
+        Capitulo2 Cap2 = new Capitulo2();
         //Criar os personagens
         Personagem pjPrincipal;
         Personagem pjSecundario;
@@ -25,6 +26,14 @@ public class App extends GUse {
         pjPrincipal.showData();
         pjSecundario.showData();
         printCentral("Capitulo 2");
+        if (pjPrincipal.vivo()) {
+            Cap2.main(scan, pjPrincipal);
+            if (pjSecundario.vivo()) printCentral("Enquanto isso, em um outro universo paralelo");
+        }
+        if (pjSecundario.vivo()) Cap2.main(scan, pjSecundario);
+        printCentral("Relatorio dos Personagens");
+        pjPrincipal.showData();
+        pjSecundario.showData();
         //Finalização/Opção de reiniciar o jogo
         print("Obrigado por jogar");
         String[] lista2 = {"Sim", "Nao"};

@@ -7,6 +7,7 @@ public class Personagem extends GUse{
     public void receberDano(int dano){
         HPAtual -= dano;
         print(Nome+" recebeu "+dano+" pontos de dano");
+        if (HPAtual < 0) HPAtual = 0;
     }
     public boolean vivo(){
         return HPAtual > 0;

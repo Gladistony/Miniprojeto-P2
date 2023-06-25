@@ -8,7 +8,7 @@ public class Inventario {
     public String listar(){
         String ret = "";
         for (String s :List){
-            ret = ret +"#" +  s;
+            ret = ret +" - " +  s;
         }
         return ret;
     }
@@ -17,5 +17,15 @@ public class Inventario {
     }
     public Inventario(){
         List = new ArrayList<String>();
+    }
+    public boolean temoItem(String item){
+        boolean resposta = false;
+        for (String s :List){
+            if (s.equalsIgnoreCase(item)){
+                resposta = true;
+                break;
+            }
+        }
+        return resposta;
     }
 }
