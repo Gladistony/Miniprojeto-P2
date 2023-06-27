@@ -24,8 +24,8 @@ public class Capitulo extends GUse {
         String temp;
         for (String s :Dialogo){
             temp = String.copyValueOf(s.toCharArray());
-            if (temp.contains("NPC")) temp.replace("NPC", Npc.Nome);
-            if (temp.contains("PLAYER")) temp.replace("PLAYER", Pjprincipal.Nome);
+            temp = temp.replace("NPC", Npc.Nome);
+            temp = temp.replace("PLAYER", Pjprincipal.Nome);
             print(temp);
         }
     }
@@ -38,7 +38,7 @@ public class Capitulo extends GUse {
             for (DuplaEscolha S: Escolhas){
                 Opcoes.add(S.Nome);
             }
-            int resp = escolhar(Scan, Opcoes);
+            int resp = escolhar(Scan, Opcoes)-1;
             return Escolhas.get(resp).Metodo;
         }
     }
