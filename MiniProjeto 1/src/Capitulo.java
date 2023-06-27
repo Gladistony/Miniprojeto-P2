@@ -20,6 +20,9 @@ public class Capitulo extends GUse {
     public void AdicionarFinal(int fim){
         finalmente = fim;
     }
+    public void AdicionarEscolhaRestrica(String txt,int Metodo, ComparadorEscolha rest){
+        Escolhas.add(new DuplaEscolha(txt, Metodo, rest));
+    }
     private void rundialog(){
         String temp;
         for (String s :Dialogo){
@@ -36,10 +39,23 @@ public class Capitulo extends GUse {
         } else {
             ArrayList<String> Opcoes = new ArrayList<String>();
             for (DuplaEscolha S: Escolhas){
-                Opcoes.add(S.Nome);
+                if (S.TemRestricao){
+                    if (S.Restricao.Run()){
+                        Opcoes.add(S.Nome);
+                    } 
+                } else {
+                    Opcoes.add(S.Nome);
+                }
             }
             int resp = escolhar(Scan, Opcoes)-1;
-            return Escolhas.get(resp).Metodo;
+            int trueresp = 0;
+            for (DuplaEscolha S: Escolhas){
+                if (S.Nome.equals(Opcoes.get(resp))){
+                    break;
+                }
+                trueresp += 1;
+            }
+            return Escolhas.get(trueresp).Metodo;
         }
     }
     public Capitulo(){

@@ -12,7 +12,7 @@ public class Capitulo2 extends GUse{
         } else if (resposta == 2) {
             Pjprincipal.receberDano(60);
             if (Pjprincipal.vivo()) {
-                print("Você é atacado pela criatura mais consegue sobreviver a ela fugindo da mesma");
+                print("");
             } else {
                 print("Seus ferimentos previos debilitam sua mobilidade, o monstro lhe pega e você acaba por morrer");
             }
@@ -76,20 +76,20 @@ public class Capitulo2 extends GUse{
     public void main(Scanner scan, Personagem pj){
         Pjprincipal = pj;
 
-        print("Depois de um tempo na sua sela só, você encontra uma chave em meio a palha e a usa para se soltar");
-        print("Seguindo pela unica porta você da de cara com uma janela que te leva até o lado de fora, você pode pular essa");
-        print("janela e cair numa carroça de feno que há no chão ou descer pela escada rumo ao labirinto");
+        print("");
+        print("");
+        print("");
         String[] lista = {"Pular janela","Descer escadas"};
         int resposta = escolhas(scan,"O que você deseja fazer?", lista);
         if (resposta == 1){
             Pjprincipal.receberDano(80);
             if (Pjprincipal.vivo()) {
-                print("Você pula do local e recebe graves ferimentos, porem de alguma forma ainda estava vivo");
+                print("");
             } else {
                 print("Você despenca e cai no chão se espatifando e tendo uma morte tragica");
             }
         } else {
-            print("Você desce pelas escada e chega no labirinto");
+            print("");
             if (Pjprincipal.Bag.temoItem("Mapa do Labirinto")){
                 print("O mapa que você tinha lhe mostra uma rota segura:");
                 String[] lista2 = {"Ir pelo caminho seguro", "Entra no labirinto"};

@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Personagem extends GUse{
     String Nome;
     int HPAtual = 100;
+    int Dano = 10;
+    String Drops = "";
     Inventario Bag;
     public void receberDano(int dano){
         HPAtual -= dano;
@@ -24,6 +26,12 @@ public class Personagem extends GUse{
             print(Nome +" - "+ HPAtual + " / 100 Inventario: "+Bag.listar());
         } else {
             print(Nome + " está morto");
+        }
+    }
+    public void VerificarGameOver(){
+        if (! vivo()){
+            printCentral("GAME OVER");
+            System.exit(0);
         }
     }
     public Personagem(){

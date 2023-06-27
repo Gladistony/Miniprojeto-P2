@@ -11,10 +11,65 @@ public class GerenciadorCampanha {
         scan = s;
     }
 
+    public static void criarCampanha2(Personagem Pjprincipal, Personagem npc){
+        Campanhas.clear();
+        //Adicionar Capitulo 0
+        Capitulo tempcap = new Capitulo();
+        tempcap.Pjprincipal = Pjprincipal;
+        tempcap.Npc = npc;
+        tempcap.Scan = scan;
+        tempcap.Tipo = 2;
+        //Adicionar dialogos
+        tempcap.AdicionarDialogo("Depois de um tempo na sua sela s\u00F3, PLAYER encontra uma chave em meio a palha e a usa para se soltar");
+        tempcap.AdicionarDialogo("Seguindo pela unica porta voc\u00EA da de cara com uma janela que te leva at\u00E9 o lado de fora, voc\u00EA pode pular essa");
+        tempcap.AdicionarDialogo("janela e cair numa carro\u00E7a de feno que h\u00E1 no ch\u00E3o ou descer pela escada rumo ao labirinto");
+        //Adicionar escolhas
+        tempcap.AdicionarEscolha("Pular janela", -1);
+        tempcap.AdicionarEscolha("Descer escadas", 1);
+        Campanhas.add(tempcap);
+
+
+        //Adicionar Capitulo 1
+        tempcap = new Capitulo();
+        tempcap.Pjprincipal = Pjprincipal;
+        tempcap.Npc = npc;
+        tempcap.Scan = scan;
+        tempcap.Tipo = 2;
+        tempcap.AdicionarDialogo("PLAYER desce pelas escada e chega no labirinto");
+        tempcap.AdicionarEscolha("Entra no Labirinto", 3);
+        tempcap.AdicionarEscolha("Voltar", 0);
+        ComparadorEscolha camparar1 = new ComparadorEscolha();
+        camparar1.CompararItem(Pjprincipal, "Mapa do Labirinto");
+        tempcap.AdicionarEscolhaRestrica("Usar o mapa", 2, camparar1);
+        Campanhas.add(tempcap);
+
+        //Adicionar Capitulo 2
+        tempcap = new Capitulo();
+        tempcap.Pjprincipal = Pjprincipal;
+        tempcap.Npc = npc;
+        tempcap.Scan = scan;
+        tempcap.Tipo = 1;
+        tempcap.AdicionarDialogo("PLAYER apenas consegue deixa o labirinto em seguran\u00E7a sem nenhum problema");
+        tempcap.AdicionarFinal(-2);
+        Campanhas.add(tempcap);
+
+        //Adicionar Capitulo 3
+        tempcap = new Capitulo();
+        tempcap.Pjprincipal = Pjprincipal;
+        tempcap.Npc = npc;
+        tempcap.Scan = scan;
+        tempcap.Tipo = 2;
+        tempcap.AdicionarDialogo("PLAYER caminha pelo labirinto at\u00E9 que encontra um NPC");
+        tempcap.AdicionarEscolha("Lutar", 5);
+        tempcap.AdicionarEscolha("Fugir", -3);
+        tempcap.AdicionarEscolha("Tentar Dialogar", 4);
+        Campanhas.add(tempcap);
+
+    }
+
+
     public static void criarCampanha1(Personagem Pjprincipal, Personagem npc){
         Campanhas.clear();
-        //Criar NPC do capitulo 1
-        npc.Nome = "Pessoa Encapuzada";
         //Adicionar Capitulo 0
         Capitulo tempcap = new Capitulo();
         tempcap.Pjprincipal = Pjprincipal;
