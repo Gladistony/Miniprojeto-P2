@@ -60,9 +60,9 @@ public class GerenciadorCampanha {
         tempcap.Scan = scan;
         tempcap.Tipo = 2;
         tempcap.AdicionarDialogo("PLAYER caminha pelo labirinto at\u00E9 que encontra um NPC");
-        tempcap.AdicionarEscolha("Lutar", 5);
+        tempcap.AdicionarEscolha("Lutar", -5);
         tempcap.AdicionarEscolha("Fugir", -3);
-        tempcap.AdicionarEscolha("Tentar Dialogar", 4);
+        tempcap.AdicionarEscolha("Tentar Dialogar", -4);
         Campanhas.add(tempcap);
 
     }
