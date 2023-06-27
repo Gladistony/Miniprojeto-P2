@@ -17,11 +17,13 @@ public class App extends GUse {
         npcJack = new Personagem();
         npcJack.Nome = "Pessoa Encapuzada";
         npcJack.Drops = "Mapa do Labirinto";
+        npcJack.HPAtual = 1000;
+        npcJack.Dano = 300;
         //----------------
         minotauro = new Personagem();
         minotauro.Nome = "Minotauro";
         minotauro.HPAtual = 300;
-        minotauro.Dano = 25;
+        minotauro.Dano = 20;
         minotauro.Drops = "Chifre de Minotauro";
         //Criar campanha
         GerenciadorCampanha.inicializar(scan);
