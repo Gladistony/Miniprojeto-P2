@@ -1,7 +1,8 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class GUse {
+public abstract class GUse {
     public static void print(String txt){
         System.out.println(txt);
         try {
@@ -22,6 +23,27 @@ public class GUse {
         }
         System.out.print(txt);System.out.println();
         System.out.println("--------------------------------------------------");
+    }
+    public static int escolhar(Scanner scan, ArrayList<String> opcoes){
+        for (int i = 0; i < opcoes.size() ;i++ ){
+            instaprint(" >" + opcoes.get(i));
+        }
+        String ler = "";
+        int cont = 0;
+        Boolean encontrado = false;
+        while (! encontrado){
+            ler = scan.nextLine();
+            cont = 0;
+            for (String i: opcoes){
+                cont++;
+                if (i.equalsIgnoreCase(ler)){
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (!encontrado) print("Opção não valida, tente novamente ...");
+        }
+        return cont;
     }
     public static int escolhas(Scanner scan, String pergunta, String[] opcoes){
         print(pergunta);
