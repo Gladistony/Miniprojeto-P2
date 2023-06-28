@@ -4,6 +4,8 @@ public class Personagem extends GUse{
     String Nome;
     int HPAtual = 100;
     int Dano = 10;
+
+    
     String Drops = "";
     Inventario Bag;
     public void receberDano(int dano){

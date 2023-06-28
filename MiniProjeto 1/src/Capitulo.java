@@ -23,6 +23,7 @@ public class Capitulo extends GUse {
     public void AdicionarEscolhaRestrica(String txt,int Metodo, ComparadorEscolha rest){
         Escolhas.add(new DuplaEscolha(txt, Metodo, rest));
     }
+    
     private void rundialog(){
         String temp;
         for (String s :Dialogo){
