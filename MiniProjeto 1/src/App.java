@@ -51,10 +51,10 @@ public class App extends GUse {
         //Processar resultados do segundo arco
         if (resposta == 1) {
             pjPrincipal.receberDano(80);
-            if (pjPrincipal.vivo()) print("Voc\u00EA pula do local e recebe graves ferimentos, porem de alguma forma ainda estava vivo");
+            if (pjPrincipal.vivo()) print("Voce pula do local e recebe graves ferimentos, porem de alguma forma ainda estava vivo");
         } else if (resposta == 3){
             pjPrincipal.receberDano(60);
-            if (pjPrincipal.vivo())  print("Voc\u00EA \u00E9 atacado pela criatura mais consegue sobreviver a ela fugindo da mesma");
+            if (pjPrincipal.vivo())  print("Voce e atacado pela criatura mais consegue sobreviver a ela fugindo da mesma");
         } else if (resposta == 4){
             pjPrincipal.receberDano(99999);
         } else {
